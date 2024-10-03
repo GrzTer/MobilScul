@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.app01"
+    namespace = "com.example.app02"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.app01"
+        applicationId = "com.example.app02"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,7 +33,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
     viewBinding.enable = true
 }
 
