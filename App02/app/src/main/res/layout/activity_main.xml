@@ -9,22 +9,25 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+     />
 
     <EditText
         android:id="@+id/surname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="text"
-        android:text="SurName"
+        android:hint="SurName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,43 +42,56 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="102dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="313dp"
-        android:text="Kobieta"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text" />
 
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="105dp"
+    <RadioGroup
+        android:id="@+id/radioG"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="291dp"
-        android:text="Mężczyzna"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+        app:layout_constraintTop_toBottomOf="@+id/text">
+
+        <RadioButton
+            android:id="@+id/radiofemale"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="313dp"
+            android:checked="false"
+            android:text="Kobieta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            tools:text="Kobieta" />
+
+        <RadioButton
+            android:id="@+id/radiomale"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="291dp"
+            android:text="Mężczyzna"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiofemale"
+            tools:text="Mężczyzna" />
+
+    </RadioGroup>
 
     <TextView
         android:id="@+id/text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Wybierz Płeć"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,27 +100,43 @@
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="225dp"
+        android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="298dp"
+        android:layout_marginEnd="16dp"
         android:text="Czy jesteś osobą pełnoletnią"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/radioG" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Zarejestruj się"
+        android:text="OK"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:text="TextView" />
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
