@@ -27,7 +27,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Name"
+        android:hint="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -41,7 +41,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="SurName"
+        android:hint="@string/surname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
@@ -85,7 +85,7 @@
     </RadioGroup>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/isAdultCheck"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -101,12 +101,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="OK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/isAdultCheck" />
 
     <TextView
         android:id="@+id/label"

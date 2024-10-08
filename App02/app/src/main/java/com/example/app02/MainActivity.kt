@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.app02.databinding.ActivityMainBinding
+import java.lang.StringBuilder
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,24 +25,41 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         with(binding) {
+
+            val user = User()
             button.setOnClickListener {
-                val name = name.text.toString()
-                val surname = surname.text.toString()
-                val checkb = checkBox.text.toString()
-
-
-                val selectedRadioId = radioG.checkedRadioButtonId
-                if (selectedRadioId != -1) {
-                    val selectedRadioButton: RadioButton = findViewById(selectedRadioId)
-                    val plec = selectedRadioButton.text.toString()
-
-                } else {
-                    Toast.makeText(this@MainActivity, "Please select a gender", Toast.LENGTH_SHORT).show()
+                user.name = name.text.toString()
+                user.surName = surname.text.toString()
+                val selectedGenderId = radioG.checkedRadioButtonId
+                var Adult = "Niepełnoletni"
+                if (isAdultCheck.isChecked) {
+                    Adult = "Pełnoletni"
                 }
-
-                if (name.isNotEmpty()) {
-                    label.text = name
+                user.isAdult = Adult
+                user.sex = findViewById<RadioButton>(selectedGenderId).text.toString()
+                label.text = getInformation(user)
             }
         }
+    }
+
+
+    fun getInformation(user: User): StringBuilder {
+
+       val  (name, surName, sex , isAdult) = user
+
+        val stringBuilder = StringBuilder()
+        stringBuilder.apply {
+            append("Witaj,")
+            append("$name $surName")
+            append("\n")
+            append("Jestes $sex")
+            append("\n")
+            append("Jestes $isAdult")
+            append("\n")
+        }
+
+
+        return  stringBuilder
+
     }
 }
