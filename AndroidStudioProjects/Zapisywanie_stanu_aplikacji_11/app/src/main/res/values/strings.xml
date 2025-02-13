@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Zapisywanie_stanu_aplikacji_11</string>
+
+    <string name="welcome_question">Jak sie nazywasz</string>
+    <string name="login_button_text">Zaloguj</string>
+    <string name="welcome_question_edit_hint">Tutaj wpisz swoje imie</string>
+</resources>
