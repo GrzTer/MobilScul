@@ -5,18 +5,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.a14navigationcomponent.databinding.FragmentFirstBinding
+import androidx.navigation.fragment.findNavController
+import com.example.a14navigationcomponent.databinding.FragmentSecondBinding
 
-class `FragmentSecond.kt`: Fragment() {
+class FragmentSecond: Fragment() {
 
-    var binding : FragmentFirstBinding? = null
+    var binding : FragmentSecondBinding? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        binding = FragmentSecondBinding.inflate(inflater, container, false)
+
+        with(binding!!){
+            buttonThird.setOnClickListener {
+                findNavController().navigate(R.id.action_fragmentSecond_to_fragmentThird)
+            }
+        }
+
         return binding!!.root
     }
 

@@ -11,9 +11,7 @@ import com.example.a14navigationcomponent.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        val button = ActivityMainBinding.inflate(LayoutInflater.from(this))
-        setContentView(button.root)
+        setContentView(R.layout.activity_main)
 
     }
 }

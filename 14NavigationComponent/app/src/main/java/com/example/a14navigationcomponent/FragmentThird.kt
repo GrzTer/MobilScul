@@ -5,18 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.a14navigationcomponent.databinding.FragmentFirstBinding
+import com.example.a14navigationcomponent.databinding.FragmentThirdBinding
 
-class Fragmentthird: Fragment() {
+class FragmentThird: Fragment() {
 
-    var binding : FragmentFirstBinding? = null
+    var binding : FragmentThirdBinding? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        binding = FragmentThirdBinding.inflate(inflater, container, false)
         return binding!!.root
     }
 
